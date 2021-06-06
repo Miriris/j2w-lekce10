@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam tříd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+<span th:text="${jedenStudent.jmeno}">Jméno studenta</span>
+<span th:text="${jedenStudent.prijmeni}">Příjmení studenta</span>
+<a th:href="@{/jedenStudent.trida}"><span th:text="${jedenStudent.trida}">Třída</span></a>
+<div th:each="rodic: ${jedenStudent.rodice}">
+    <p>Jméno a příjmení rodiče: <span th:text="${rodic.jmeno}" >Jméno rodiče</span>
+    <span th:text="${rodic.prijmeni}">Příjmení rodiče</span></p>
+    <p>Telefon: <span th:text="${rodic.telefon}">Telefon rodiče</span></p>
+    <p>E-mail: <span th:text="${rodic.email}">Email rodiče</span></p>
+</div>
+<a th:href="@{/}" >Zpět na seznam tříd</a>
+</body>
+</html>

@@ -24,6 +24,10 @@ public class Student {
   private String jmeno;
   private String prijmeni;
 
+
+
+
+
   @ManyToOne
   private Trida trida;
 
@@ -62,6 +66,8 @@ public class Student {
   public void setTrida(Trida trida) {
     this.trida = trida;
   }
+
+
 
   public List<Rodic> getRodice() {
     return rodice;
